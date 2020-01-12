@@ -1,0 +1,48 @@
+:root {
+--bg-color: black;
+--page-spacing: 50px;
+--bar-spacing: 10px;
+--bar-color: darkolivegreen;
+}
+
+
+
+.GraphContainer {
+	display: grid;
+	grid-template-columns: repeat(5, 150px);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 25px;
+	grid-row-gap: 10px;
+	height: 500px;
+	background-color: var(--bg-color);
+	margin-left: var(--page-spacing);
+	align-items: end;
+	justify-content: space-around;
+}
+
+.Bar {
+	grid-row: 1 / span 5;
+	box-sizing: border-box;
+	padding: var(--bar-spacing);
+	max-height: 500px;
+	background-color: var(--bar-color);
+	text-align: center;
+	/*transition: */
+}
+
+.Bar:hover {
+	filter: contrast(1.75);
+}
+
+h1 {
+	text-align: center;
+}
+
+
+
+
+/*ny	3219
+tx	3676
+fl	4200
+wa	4267
+ca	9654*/
