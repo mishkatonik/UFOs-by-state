@@ -18,6 +18,9 @@
 	margin-left: var(--page-spacing);
 	align-items: end;
 	justify-content: space-around;
+	border-left: 10px solid purple;
+	border-bottom: 10px solid purple;
+	background-image: url("../img/starry-sky.jpg");
 }
 
 .Bar {
@@ -27,18 +30,17 @@
 	max-height: 500px;
 	background-color: var(--bar-color);
 	text-align: center;
-	/*transition: */
+	transition-duration: 0.4s; 
 }
 
 .Bar:hover {
 	filter: contrast(1.75);
+	transform: perspective(200px) translate3d(5px, 0, 5px);
 }
 
 h1 {
 	text-align: center;
 }
-
-
 
 
 /*ny	3219
