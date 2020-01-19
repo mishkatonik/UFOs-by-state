@@ -1,7 +1,7 @@
 console.log('running ufos.js');
 
 
-fetch("../data/ufodata.json")
+fetch("../data/sightings-by-state.json")
 	.then(response => response.json())
 	.then(data => {
 		console.log("Got the data!");
