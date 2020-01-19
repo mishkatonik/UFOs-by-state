@@ -5,6 +5,21 @@
 --bar-color: green;
 }
 
+/*------------------TITLES & BODY------------------*/
+
+
+h1 {
+	text-align: center;
+	color: white;
+	font-family: 'Major Mono Display', monospace;
+}
+
+body {
+	background-color: black;
+}
+
+
+/*--------------------NAVIGATION------------------*/
 .NavBar {
 	display: flex;
 	justify-content: space-around;
@@ -40,6 +55,22 @@
 
 
 
+/*------------------BAR GRAPH------------------*/
+
+.StateCheckboxContainer {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 5px;
+    align-items: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 10px;
+}
+
+.checkboxItem {
+
+}
 
 
 #graphContainer {
@@ -47,7 +78,7 @@
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(5, 1fr);
 	grid-column-gap: 25px;
-	height: 500px;
+	height: 400px;
 	background-color: var(--bg-color);
 	margin-left: var(--page-spacing);
 	margin-right: var(--page-spacing);
@@ -64,7 +95,7 @@
 	padding: var(--bar-spacing);
 	margin-left: var(--bar-spacing);
 	margin-right: var(--bar-spacing);
-	max-height: 500px;
+	max-height: 400px;
 	background-color: var(--bar-color);
 	text-align: center;
 	color: black;
@@ -77,19 +108,3 @@
 	transform: perspective(600px) translate3d(0, 0, 10px);
 }
 
-h1 {
-	text-align: center;
-	color: white;
-	font-family: 'Major Mono Display', monospace;
-}
-
-body {
-	background-color: black;
-}
-
-
-/*ny	3219
-tx	3676
-fl	4200
-wa	4267
-ca	9654*/

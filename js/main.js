@@ -7,7 +7,15 @@ fetch("../data/sightings-by-state.json")
 		console.log("Got the data!");
 		console.log(data);
 	// TODO: Call a function to do something with this data.
-});
+		for (let stateCount of data) {
+			let checkboxContainer = document.querySelector(".StateCheckboxContainer");
+			let stateLabel = document.createElement("label");
+			stateLabel.innerHTML = `
+				<input type="checkbox"><span>${ stateCount.state }</span>
+				`;
+			checkboxContainer.appendChild(stateLabel);
+			}
+		});
 
 function render() {
 	let graph = document.querySelector("#graphContainer");
