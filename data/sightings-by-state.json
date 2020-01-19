@@ -1,0 +1,206 @@
+[
+  {
+    "state": "ak",
+    "sightings": 319
+  },
+  {
+    "state": "al",
+    "sightings": 642
+  },
+  {
+    "state": "ar",
+    "sightings": 588
+  },
+  {
+    "state": "az",
+    "sightings": 2414
+  },
+  {
+    "state": "ca",
+    "sightings": 8911
+  },
+  {
+    "state": "co",
+    "sightings": 1413
+  },
+  {
+    "state": "ct",
+    "sightings": 891
+  },
+  {
+    "state": "de",
+    "sightings": 166
+  },
+  {
+    "state": "fl",
+    "sightings": 3835
+  },
+  {
+    "state": "ga",
+    "sightings": 1254
+  },
+  {
+    "state": "hi",
+    "sightings": 262
+  },
+  {
+    "state": "ia",
+    "sightings": 678
+  },
+  {
+    "state": "id",
+    "sightings": 521
+  },
+  {
+    "state": "il",
+    "sightings": 2499
+  },
+  {
+    "state": "in",
+    "sightings": 1288
+  },
+  {
+    "state": "ks",
+    "sightings": 613
+  },
+  {
+    "state": "ky",
+    "sightings": 854
+  },
+  {
+    "state": "la",
+    "sightings": 558
+  },
+  {
+    "state": "ma",
+    "sightings": 1256
+  },
+  {
+    "state": "md",
+    "sightings": 837
+  },
+  {
+    "state": "me",
+    "sightings": 558
+  },
+  {
+    "state": "mi",
+    "sightings": 1835
+  },
+  {
+    "state": "mn",
+    "sightings": 1012
+  },
+  {
+    "state": "mo",
+    "sightings": 1458
+  },
+  {
+    "state": "ms",
+    "sightings": 375
+  },
+  {
+    "state": "mt",
+    "sightings": 478
+  },
+  {
+    "state": "nc",
+    "sightings": 1740
+  },
+  {
+    "state": "nd",
+    "sightings": 128
+  },
+  {
+    "state": "ne",
+    "sightings": 380
+  },
+  {
+    "state": "nh",
+    "sightings": 486
+  },
+  {
+    "state": "nj",
+    "sightings": 1255
+  },
+  {
+    "state": "nm",
+    "sightings": 720
+  },
+  {
+    "state": "nv",
+    "sightings": 803
+  },
+  {
+    "state": "ny",
+    "sightings": 2980
+  },
+  {
+    "state": "oh",
+    "sightings": 2274
+  },
+  {
+    "state": "ok",
+    "sightings": 724
+  },
+  {
+    "state": "or",
+    "sightings": 1747
+  },
+  {
+    "state": "pa",
+    "sightings": 2366
+  },
+  {
+    "state": "ri",
+    "sightings": 228
+  },
+  {
+    "state": "sc",
+    "sightings": 1003
+  },
+  {
+    "state": "sd",
+    "sightings": 183
+  },
+  {
+    "state": "tn",
+    "sightings": 1119
+  },
+  {
+    "state": "tx",
+    "sightings": 3446
+  },
+  {
+    "state": "ut",
+    "sightings": 621
+  },
+  {
+    "state": "va",
+    "sightings": 1271
+  },
+  {
+    "state": "vt",
+    "sightings": 260
+  },
+  {
+    "state": "wa",
+    "sightings": 3965
+  },
+  {
+    "state": "wi",
+    "sightings": 1232
+  },
+  {
+    "state": "wv",
+    "sightings": 448
+  },
+  {
+    "state": "wy",
+    "sightings": 175
+  },
+  {
+    "state": "Grand Total",
+    "sightings": 65069
+  }
+]
