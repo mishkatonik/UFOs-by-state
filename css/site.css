@@ -2,7 +2,10 @@
 --bg-color: black;
 --page-spacing: 50px;
 --bar-spacing: 10px;
---bar-color: green;
+--bar-color: #7892c2;
+--bar-hover: #476e9e;
+--font-text: 'Space Mono', monospace;
+--font-header: 'Major Mono Display', monospace;
 }
 
 /*------------------TITLES & BODY------------------*/
@@ -11,7 +14,7 @@
 h1 {
 	text-align: center;
 	color: white;
-	font-family: 'Major Mono Display', monospace;
+	font-family: var(--font-header);
 }
 
 body {
@@ -34,7 +37,7 @@ body {
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family: var(--font-text);
 	font-size:19px;
 	padding:12px 37px;
 	text-decoration:none;
@@ -63,9 +66,10 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-gap: 5px;
     align-items: center;
+    margin: 10px;
     text-transform: uppercase;
     color: white;
-    margin: 10px;
+    font-family: var(--font-text);
 }
 
 .checkboxItem {
@@ -98,13 +102,16 @@ body {
 	max-height: 400px;
 	background-color: var(--bar-color);
 	text-align: center;
+	text-transform: uppercase;
+    font-family: var(--font-text);
 	color: black;
-	font-family: 'Space Mono', monospace;
+	font-family: var(--font-text);
 	transition-duration: 0.4s; 
 }
 
 .Bar:hover {
 	filter: contrast(1.75);
+	background-color: var(--bar-hover);
 	transform: perspective(600px) translate3d(0, 0, 10px);
 }
 
