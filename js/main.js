@@ -1,19 +1,46 @@
 console.log('running ufos.js');
 
-let state = []
+
+doFetch();
+
+// example checkbox thing from Mark:
+// http://chat.kickstartcoding.com/cohort1910/pl/3x47899f83bopm4rquat6ikpoa
+	let checkedThings = document.querySelectorAll("input:checked") // gets all the boxes that are currently selected
+	let arrayOfCheckedThings = Array.from(checkedThings)           // turn the nodelist into an array for iteration
 
 
-fetch("../data/sightings-by-state.json")
+
+
+function doFetch() {
+	fetch("../data/sightings-by-state.json")
 	.then(response => response.json())
 	.then(data => {
 		console.log("Got the data!");
 		console.log(data);
-
+		let checkboxItem = document.querySelector(".checkboxItem");
+		// create checkbox container, but only the first time the page
+		if (typeof(checkboxItem) != 'undefined' && checkboxItem != null) {
+			return;
+		} else {
+			makeCheckboxes(data);
+		}
 		render(data);
-		});
+	});
+}
 
 
-let stateInput = document.querySelectorAll(".checkboxItem");
+function makeCheckboxes(data) {
+	// select and populate the checkbox container with states
+	for (let stateCount of data) {
+		let checkboxContainer = document.querySelector(".StateCheckboxContainer");
+		let stateLabel = document.createElement("label");
+		stateLabel.innerHTML = `
+			<input type="checkbox" class="checkboxItem" onClick="doFetch()"><span>${ stateCount.state }</span>
+			`;
+		checkboxContainer.appendChild(stateLabel);
+	}
+}
+
 
 
 
@@ -24,24 +51,15 @@ function render(data) {
 		// set base height of bars, equal to graph height
 		let baseHeight = '400px';
 
-		// select and populate the checkbox container with states
-		let checkboxContainer = document.querySelector(".StateCheckboxContainer");
-		let stateLabel = document.createElement("label");
-		stateLabel.innerHTML = `
-			<input type="checkbox" class="checkboxItem"><span>${ stateCount.state }</span>
-			`;
-		checkboxContainer.appendChild(stateLabel);
-
 		// create new bars in graph
 		let newBar = document.createElement('div');
 		newBar.classList.add('Bar');
 		newBar.textContent = stateCount.state + ' - ' + stateCount.sightings;
-		newBar.style.height = (Number(stateCount.sightings) / 10000) + '%';
+		newBar.style.height = ((Number(stateCount.sightings) / 10000)*baseHeight) + '%';
 		graph.appendChild(newBar);
 
 		}
 	}
-
 
 
 // from 2.2 activity solution ///////////////////////////////////////////
@@ -112,3 +130,5 @@ function render(data) {
 // 		}
 
 // render();
+
+
