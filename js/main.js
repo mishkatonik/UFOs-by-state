@@ -18,7 +18,7 @@ function doFetch() {
 		console.log("Got the data!");
 		console.log(data);
 		let checkboxItem = document.querySelector(".checkboxItem");
-		// create checkbox container, but only the first time the page
+		// create checkbox container, but only the first time the page renders
 		if (typeof(checkboxItem) != 'undefined' && checkboxItem != null) {
 			return;
 		} else {
@@ -28,6 +28,15 @@ function doFetch() {
 	});
 }
 
+function getInputs() {
+	let checkedThings = document.querySelectorAll("input:checked");
+	let arrayOfCheckedThings = Array.from(checkedThings);
+	let checkedThingsValues = arrayOfCheckedThings.map(thing => thing.value);
+	console.log(checkedThings);
+	console.log(arrayOfCheckedThings);
+	console.log(checkedThingsValues);
+}
+
 
 function makeCheckboxes(data) {
 	// select and populate the checkbox container with states
@@ -35,7 +44,7 @@ function makeCheckboxes(data) {
 		let checkboxContainer = document.querySelector(".StateCheckboxContainer");
 		let stateLabel = document.createElement("label");
 		stateLabel.innerHTML = `
-			<input type="checkbox" class="checkboxItem" onClick="doFetch()"><span>${ stateCount.state }</span>
+			<input type="checkbox" class="checkboxItem" onClick="getInputs()"><span>${ stateCount.state }</span>
 			`;
 		checkboxContainer.appendChild(stateLabel);
 	}
@@ -55,11 +64,15 @@ function render(data) {
 		let newBar = document.createElement('div');
 		newBar.classList.add('Bar');
 		newBar.textContent = stateCount.state + ' - ' + stateCount.sightings;
-		newBar.style.height = ((Number(stateCount.sightings) / 10000)*baseHeight) + '%';
+		newBar.style.height = ((Number(stateCount.sightings) / 1000)*baseHeight) + '%';
 		graph.appendChild(newBar);
 
 		}
 	}
+
+
+let highest = Math.max(...powerLevels.map(pair => pair[0]));
+
 
 
 // from 2.2 activity solution ///////////////////////////////////////////
@@ -132,3 +145,57 @@ function render(data) {
 // render();
 
 
+
+
+
+// LIST OF STATES (if needed i hope not)
+// AL
+// AK
+// AZ
+// AR
+// CA
+// CO
+// CT
+// DE
+// FL
+// GA
+// HI
+// ID
+// IL
+// IN
+// IA
+// KS
+// KY
+// LA
+// ME
+// MD
+// MA
+// MI
+// MN
+// MS
+// MO
+// MT
+// NE
+// NV
+// NH
+// NJ
+// NM
+// NY
+// NC
+// ND
+// OH
+// OK
+// OR
+// PA
+// RI
+// SC
+// SD
+// TN
+// TX
+// UT
+// VT
+// VA
+// WA
+// WV
+// WI
+// WY
